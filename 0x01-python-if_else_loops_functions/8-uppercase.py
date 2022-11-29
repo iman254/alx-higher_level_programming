@@ -8,6 +8,3 @@ def uppercase(str):
             c = chr(ord(c) - 32)
         print("{}".format(c), end="")
     print("")
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
