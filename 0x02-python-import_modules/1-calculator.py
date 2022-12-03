@@ -1,17 +1,12 @@
 #!/usr/bin/python3
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     """Print the sum, subtraction, multiplication and division of 10 and 5."""
-    from calculator_1 import add
-    from calculator_1 import sub
-    from calculator_1 import mul 
-    from calculator_1 import div 
+    from calculator_1 import add, sub, mul, div
 
-    a = 10 
+    a = 10
     b = 5
-    print("{} + {} = {}".format(a, b, add(a + b)))
-    print("{} + {} = {}".format(a, b, sub(a + b)))
-    print("{} + {} = {}".format(a, b, mul(a + b)))
-    print("{} + {} = {}".format(a, b, div(a + b)))
-
-     
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} + {} = {}".format(a, b, sub(a, b)))
+    print("{} + {} = {}".format(a, b, mul(a, b)))
+    print("{} + {} = {}".format(a, b, div(a, b)))
