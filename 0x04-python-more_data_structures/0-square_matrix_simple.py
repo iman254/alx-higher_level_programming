@@ -1,10 +1,5 @@
-def square_matrix_simple(matrix = []):
-    """calculate the new matrix"""
-    new_matrix = []
-    for_row in matrix:
-        new_row = []
-        for element in row:
-            new_row.append(element**2)
-        new_matrix.append(new_row)
-    return new_matrix 
-    
+#!/usr/bin/python3
+
+def square_matrix_simple(matrix=[]):
+    new_matrix = [[x ** 2 for x in row] for row in matrix]
+    return new_matrix
