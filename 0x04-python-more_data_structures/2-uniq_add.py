@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-
-def uniq_add(my_list =[]):
-    a = set(my_list)
-    add = 0 
-    for i in a:
-        add += i
-    return add
-
+def uniq_add(my_list=[]):
+    new = set(my_list)
+    res = 0
+    for i in new:
+        res += i
+    return res
