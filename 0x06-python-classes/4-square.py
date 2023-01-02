@@ -4,8 +4,9 @@
 
 
 class Square:
-    """instantiating with def __innit__"""
+    """instantiating with def __init__"""
     def __init__(self, size=0):
+        """innitialise a new square"""
         self.size = size
 
     @property
@@ -16,7 +17,7 @@ class Square:
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
-            raise TypeError("size mus be an integer")
-        elif size < 0:
-            raise ValueError("size must b >= 0")
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
         self.__size = value
