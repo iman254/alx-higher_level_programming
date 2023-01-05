@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+""" Function that adds 2 integers."""
+
+
+def add_integer(a, b=98):
+    """Function that adds 2 integers
+    Args:
+    a - Parameter 1
+    b - Parameter 2
+    Return: sum of a and b
+    """
+
+    if not isinstance(a, int) or (a, float):
+        raise TypeError("a must be an integer")
+    elif not isinstance(b, int) or (b, float):
+        raise TypeError("b must be an integer")
+    return (int(a) + int(b))
