@@ -1,18 +1,40 @@
-#!/usr/bin/python3
+Test cases for 0-add_integer module
+===================================
 
-""" Function that adds 2 integers."""
+0-add_int returns the sum of two arguments
 
+importing function from the module:
+    >>> add_integer = __import__('0-add_integer')
 
-def add_integer(a, b=98):
-    """Function that adds 2 integers
-    Args:
-    a - Parameter 1
-    b - Parameter 2
-    Return: sum of a and b
-    """
+adding two positive integers(a = 1, b = 2):
+    >>> add_integer(1, 2)
+    3 
 
-    if not isinstance(a, int) or (a, float):
-        raise TypeError("a must be an integer")
-    elif not isinstance(b, int) or (b, float):
-        raise TypeError("b must be an integer")
-    return (int(a) + int(b))
+Adding two positive floats(a = 1.0, b = 2.0):
+    >>> add_integer(1.0, 2.0)
+    3
+
+Add one positive and one negative integer(a = 2, b = 2.0):
+    >>> add_integer(2, 2.0)
+    4
+
+Add two negative integers(a = -2, b = -4):
+    >>> add_integer(-2, -4)
+    -6
+
+Add one integer and default integer(a = 2, b = 98):
+    >>> add_integer(2)
+    100
+
+Adding an integer and a string(a = 2, b = "School):
+    >>> add_integer(a = 2, b = "School)
+    Traceback(most recent call last)
+             ...
+    TypeError: b must be an integer
+
+Adding an integer and a string(a = "School", b = 98):
+    >>> add_integer (a = "School", b = 98)
+    Traceback(most recent call last)
+             ...
+    TypeError: a must be an integer
+
