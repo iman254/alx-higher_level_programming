@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Function that prints the first and last name.
+"""Function that prints the first and last name. """
 def say_my_name(first_name, last_name=""):
     """ args:
     first_name - first name to be input
