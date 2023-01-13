@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 
 """Function that prints the first and last name. """
+
+
 def say_my_name(first_name, last_name=""):
-    """ args:
+    """ function that takes in first_name and last_name and prints them out.
+    arg:
     first_name - first name to be input
     last_name - last name to be input """
-
 
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
