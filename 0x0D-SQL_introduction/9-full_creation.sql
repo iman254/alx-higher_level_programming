@@ -1,8 +1,8 @@
 - create a second table and populate with data
 CREATE TABLE IF NOT EXISTS second_table (
-	id int,
-	name varchar(256),
-	score int
+	id INT 
+	name VARCHAR(256),
+	score INT 
 );
 
 INSERT INTO second_table (id, name, score)
