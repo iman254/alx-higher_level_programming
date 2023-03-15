@@ -9,3 +9,4 @@ if (process.argv.length < 4) {
   const max = Math.max(...array);
   console.log(max);
 }
+
