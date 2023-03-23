@@ -5,19 +5,20 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    try:
-        db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], host= 'localhost', port = 3306)
-        except MySQLdb.Error:
-            print("connection error")
+    db = MySQLdb.connect(user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3],
+                         host='localhost',
+                         port=3306)
 
-        c = db.cursor()
-        try:
+    cursor = db.cursor()
 
-            c.execute("""SELECT * FROM states ORDER BY states.id ASC""")
-            rows = c.fetchall()
-            for row in rows:
-                print(row)
-        except MySQLdb.Error:
-            print("execution Error)
-        c.close()
-        db.close()
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+
+    data = cursor.fetchall()
+
+    for row in data:
+        print(row)
+
+    cursor.close()
+    db.close()
