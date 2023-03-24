@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-""" script that takes in argument and displays all values in the states table of the database where name matches the arguement"""
+
+"""
+    A script that lists all states from the database hbtn_0e_0_usa
+    starting with capital letter N
+    Username, password and database names are given as user args
+"""
+
 
 import sys
-import MySQldb
+import MySQLdb
+
 
 if __name__ == '__main__':
     db = MySQLdb.connect(user=sys.argv[1],
@@ -10,13 +17,19 @@ if __name__ == '__main__':
                          db=sys.argv[3],
                          host='localhost',
                          port=3306)
-    cursor = db.cursor()
-    query = """SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC """.format(sys.argv[4])
 
-    cursor.execute(query)
+    cursor = db.cursor()
+
+    sql = """ SELECT * FROM states
+          WHERE name LIKE BINARY '{}'
+          ORDER BY id ASC """.format(sys.argv[4])
+
+    cursor.execute(sql)
+
     data = cursor.fetchall()
-    for row in rows:
-        print(row)  
+
+    for row in data:
+        print(row)
 
     cursor.close()
     db.close()
