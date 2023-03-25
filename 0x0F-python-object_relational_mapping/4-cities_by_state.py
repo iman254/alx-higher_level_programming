@@ -14,6 +14,6 @@ if __name__ = "__main__":
     cursor.execute(query)
     data = cursor.fetchall()
     for row in data:
-        prnt(row)
+        print(row)
     cursor.close()
     db.close()       
