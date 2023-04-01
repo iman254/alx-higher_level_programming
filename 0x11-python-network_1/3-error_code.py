@@ -1,16 +1,13 @@
 #!/usr/bin/python3
-"""takes in url sends request to url and displays body (in utf-8)
-"""
+"""handnling errors with urllib"""
+
+from urllib.error import HTTPError
+from urllib.request import urlopen
+from sys import argv
 
 if __name__ == "__main__":
-    import sys
-    from urllib import request
-    from urllib.error import HTTPError
-
-    url = sys.argv[1]
     try:
-        with request.urlopen(url) as response:
-            print(response.read().decode(utf-8))
-
+        with urlopen(argv[1]) as response:
+            print(response.read().decode("utf-8"))
     except HTTPError as error:
-        print(f"error code: {error.status}")
+        print(f'Error code: {error.status}')
