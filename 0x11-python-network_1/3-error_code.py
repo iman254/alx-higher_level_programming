@@ -4,7 +4,7 @@
 
 if __name__ == "__main__":
     import sys
-    from urllib import request,
+    from urllib import request
     from urllib.error import HTTPError
 
     url = sys.argv[1]
