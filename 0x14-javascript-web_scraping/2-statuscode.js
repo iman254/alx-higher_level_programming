@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// script that prints the error code from a Get request 
+// script that prints the error code from a Get request
 
 const request = require('request');
 const url = process.argv[2];
